@@ -13,7 +13,7 @@ module.exports = {
   create: (req,res,next) => {
     let newBook = new Book(req.body.title,req.body.author) 
     books.push(newBook);
-    id = books.length;  
+    id++;  
     res.status(200).send(books);
   },
   update: (req,res,next) => {
